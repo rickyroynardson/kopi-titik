@@ -41,23 +41,31 @@ header .container {
     background-color: #424642;
 }
 
-header .container a {
+header > .container > a {
     color: #F3F4ED;
     text-decoration: none;
     font-size: 24px;
     font-family: 'Fascinate', cursive;
 }
 
-header .container nav {
+header .container .nav {
     position: absolute;
-    top: 57px;
-    right: 10px;
-    width: 60%;
-    background-color: red;
+    top: 52px;
+    left: -100%;
+    width: 70%;
+    height: 100vh;
+    padding: 5px 10px;
+    background-color: #F3F4ED;
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.50);
+    transition: 300ms;
 }
 
 header .container nav ul {
     list-style: none;
+}
+
+header .container nav ul li a {
+    text-decoration: none;
 }
 
 .hamburger {
@@ -72,4 +80,21 @@ header .container nav ul {
     height: 3px;
     margin: 5px auto;
     background-color: #F3F4ED;
+    transition: all 300ms ease-in-out;
+}
+
+.hamburger.visible .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.visible .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.visible .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.visible {
+    left: 0 !important;
 }
