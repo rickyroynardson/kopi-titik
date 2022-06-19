@@ -11,6 +11,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: #F3F4ED;
+}
+
 header {
     display: inline;
 }
@@ -98,4 +102,44 @@ header .container nav ul li a {
 
 .visible {
     left: 0 !important;
+}
+
+main div section {
+    margin: 15px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+main div section article h2 {
+    color: #424642;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: #C06014;
+}
+
+#cerita-kami article p {
+    text-align: justify;
+    margin: 8px 0;
+}
+
+footer {
+    background-color: #536162;
+}
+
+@media (min-width: 640px) {}
+@media (min-width: 768px) {}
+@media (min-width: 1024px) {
+    main {
+        display: flex;
+    }
+    
+    main > div {
+        width: 75%;
+    }
+
+    main > aside {
+        width: 25%;
+    }
 }
