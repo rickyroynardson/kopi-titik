@@ -124,6 +124,10 @@ main div section article h2 {
     margin: 8px 0;
 }
 
+aside article {
+    border: 1px solid;
+}
+
 footer {
     background-color: #536162;
 }
