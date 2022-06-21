@@ -41,6 +41,7 @@ header .container {
     justify-content: space-between;
     position: sticky;
     top: 0;
+    z-index: 100;
     padding: 10px 20px;
     background-color: #424642;
 }
@@ -132,6 +133,35 @@ main div section article h2 {
     text-decoration-color: #C06014;
 }
 
+#gabung-sekarang {
+    margin: 15px;
+    padding: 40px 15px;
+    background-color: #536162;
+    text-align: center;
+}
+
+#gabung-sekarang article p {
+    font-size: 14px;
+    color: #F3F4ED;
+}
+
+#gabung-sekarang article button {
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: #536162;
+    background-color: #F3F4ED;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+#gabung-sekarang article button:hover {
+    color: #FFFFFF;
+    background-color: #879091;
+}
+
 #kopi-titik article p {
     text-align: justify;
     margin: 8px 0;
@@ -142,14 +172,24 @@ main div section article h2 {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+#kopi-titik > article > div > div {
+    border-radius: 10px;
+    transition: all 300ms;
+}
+
+#kopi-titik > article > div > div:hover {
+    background-color: #EBEBEB;
+}
+
 
 #kopi-titik > article > div > div > h5 {
     text-align: center;
+    color: #536162;
 }
 
 #kopi-titik > article > div > div > p {
     font-size: 12px;
-    margin: 0 10px;
+    margin: 5px 10px;
 }
 
 #kopi-titik > article > div > div > img {
@@ -167,6 +207,72 @@ main div section article h2 {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    filter: blur(0.75px);
+    transition: filter 300ms;
+}
+
+#cerita-kami article > img:hover {
+    filter: blur(0px);
+}
+
+#partner-kami article > p {
+    text-align: justify;
+    margin: 8px 0;
+}
+
+#partner-kami article > div {
+    display: flex;
+    flex-direction: column;
+}
+
+#partner-kami article > div > img {
+    display: block;
+    width: fit-content;
+    height: 50px;
+    margin: 15px auto;
+    transition: all 300ms;
+}
+
+#partner-kami article > div > img:hover {
+    transform: scale(105%);
+}
+
+#layanan-event article p {
+    text-align: justify;
+    margin: 8px 0;
+}
+
+#layanan-event > article > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#layanan-event > article > div > div {
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#layanan-event > article > div > div > h3 {
+    font-size: 24px;
+    color: #424642;
+}
+
+#layanan-event > article > div > div > p {
+    text-align: center;
+    font-size: 18px;
+}
+
+#layanan-event > article > div > div > ul {
+    list-style: none;
+    font-size: 14px;
+    color: #8E8E8C;
+}
+
+#layanan-event > article > div > div > ul > li {
+    margin: 8px 0;
 }
 
 #profil h2 {
@@ -232,8 +338,7 @@ footer > p > a {
 }
 
 @media (min-width: 640px) {}
-@media (min-width: 768px) {}
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     header .container .nav {
         all: unset;
     }
@@ -268,6 +373,22 @@ footer > p > a {
         display: none;
     }
 
+    #cerita-kami article > img {
+        height: 300px;
+    }
+
+    #layanan-event > article > div {
+        flex-direction: row;
+    }
+
+    #partner-kami article > div {
+        flex-direction: row;
+    }
+
+    #partner-kami article > div > img {
+        height: 40px;
+    }
+
     main {
         display: flex;
     }
@@ -278,5 +399,20 @@ footer > p > a {
 
     main > aside {
         width: 25%;
+    }
+
+    aside article figure img {
+        width: 100px;
+        height: 100px;
+    }
+}
+@media (min-width: 1024px) {
+    #partner-kami article > div > img {
+        height: 60px;
+    }
+
+    aside article figure img {
+        width: 150px;
+        height: 150px;
     }
 }
